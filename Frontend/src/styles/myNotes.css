@@ -1,0 +1,124 @@
+/* Container Styling */
+.my-notes-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Button Styling */
+.create-note-btn {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.create-note-btn:hover {
+  background-color: #4cae4c;
+}
+
+/* Accordion Styling */
+.accordion {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.accordion-buttons button {
+  margin-left: 10px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #0275d8;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #025aa5;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Accordion Body Styling */
+.accordion-body {
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.note-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.note-description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.category-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  border: none;
+}
+
+.note-id {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Toggle Button Styling */
+.toggle-accordion-btn {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.toggle-accordion-btn:hover {
+  background-color: #e6e6e6;
+}
