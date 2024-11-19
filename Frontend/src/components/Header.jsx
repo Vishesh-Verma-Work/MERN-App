@@ -1,3 +1,4 @@
+//header.jsx
 import React from "react";
 import "../styles/header.css";
 import { NavLink } from "react-router-dom";
@@ -18,7 +19,7 @@ const Header = () => {
         />
       </div>
       <div className="right">
-        <NavLink to={"/mynotes"}>
+        <NavLink to={"/api/notes"}>
           <button className="my-notes-btn">My Notes</button>
         </NavLink>
         <div className="dropdown">

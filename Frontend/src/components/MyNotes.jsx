@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+//MyNotes.jsx(frontend)
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Title from "./Title";
 import "../styles/mynotes.css";
 import "../styles/title.css";
-import notes from "../utils/Hard Coded Data/notes";
+// import notes from "../utils/Hard Coded Data/notes";
+import axios from "axios";
+
+
 
 const MyNotes = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -16,13 +20,29 @@ const MyNotes = () => {
     alert(`Are you sure, you want to delete ${x}`);
   };
 
+  const [ notesData, setNotesData ] = useState([]);
+
+  const fetchNotesData = async () => {
+    try {
+      const  data  = await axios.get("/mynotes");
+      console.log(data);
+      setNotesData(data);
+    } catch (error) {
+      console.error("Error fetching notesss:", error);
+    }
+  };
+
+  useEffect(()=>{
+    fetchNotesData();
+  },[]);
+  
   return (
     <>
       <Title title={"Hey there! Vishesh Verma"} />
       <div className="my-notes-container">
         <button className="create-note-btn">Create New Note</button>
 
-        {notes.map((n) => {
+        {notesData.map((n) => {
           return (
             <div className="accordion" key={n._id}>
               <div className="accordion-header">

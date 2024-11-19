@@ -1,6 +1,8 @@
+//index.js(Frontend)
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 
 import MyNotes from "./src/components/MyNotes";
 import Header from "./src/components/Header";
@@ -28,7 +30,7 @@ const appRouter = createBrowserRouter([
         element: <Landing  />,
       },
       {
-        path: "/mynotes",
+        path: "/api/notes",
         element: <MyNotes />,
       },
     ],

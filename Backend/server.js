@@ -1,8 +1,27 @@
+//server.js(Backend)
 const express = require('express');
 const app = express();
 const notes = require('./data/notes');
 const dotenv = require('dotenv');
+const cors = require('cors');
+
+
+
+app.use(cors());
+
 dotenv.config();
+
+const path = require('path');
+
+// Serve static files from the React app's build directory
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+
+// Catch-all route to serve React's index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
+
 
 const PORT = process.env.PORT || 5000;
 
